@@ -3,7 +3,7 @@
     @method('PUT')
     <div>
         <label for="content">Write Your Content</label>
-        <input type="text" value ="{{ $note->content }}"name="content">
+        <textarea value ="{{ $note->content }}"name="content"></textarea>
     </div>
     <button type="submit">Save</button>
 </form>

@@ -2,7 +2,7 @@
      @csrf 
      <div>
          <label for="content">Write Your Content</label>
-         <input type="text" name="content">
+         <textarea name="content"></textarea>
      </div>
      <button type="submit">Save</button>
 </form>
