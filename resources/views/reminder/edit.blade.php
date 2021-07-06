@@ -13,10 +13,15 @@
     <label for="time">Time</label>
     <input type="time" value ="{{ $reminder->time }}"name="time">    
 </div>
-<label for="important">Imprtant</label>
+<!--<label for="important">Imprtant</label>
 <select name="important" id="important">
     <option value="true">True</option>
     <option value="false">False</option>
+</select>-->
+<label for="important">Imprtant</label>
+<select name="important">
+    <option {{ $reminder->important=='false'?'selected':'' }}value="false">False</option>
+    <option {{ $reminder->important=='true'?'selected':'' }}value="true">True</option>
 </select>
     <button type="submit">Save</button>
 </form>
