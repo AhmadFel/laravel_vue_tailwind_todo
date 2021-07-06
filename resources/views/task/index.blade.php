@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <a href="/task/create">New Task</a>
 <table>
     <tr>
@@ -48,3 +50,4 @@
     </tr>
     @endforeach
 </table>
+@endsection

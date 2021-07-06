@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <form action="/note/{{ $note->id }}" method="POST">
     @csrf 
     @method('PUT')
@@ -7,3 +9,4 @@
     </div>
     <button type="submit">Save</button>
 </form>
+@endsection

@@ -1,3 +1,6 @@
+
+@extends('layout')
+@section('content')
 <a href="/reminder/create">New Note</a>
 <table>
     <tr>
@@ -48,3 +51,4 @@
     </tr>
     @endforeach
 </table>
+@endsection

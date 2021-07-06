@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <form action="/reminder/{{ $reminder->id }}" method="POST">
     @csrf 
     @method('PUT')
@@ -25,3 +27,4 @@
 </select>
     <button type="submit">Save</button>
 </form>
+@endsection

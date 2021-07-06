@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <a href="/note/create">New Note</a>
 <table>
     <tr>
@@ -30,3 +32,4 @@
     </tr>
     @endforeach
 </table>
+@endsection
