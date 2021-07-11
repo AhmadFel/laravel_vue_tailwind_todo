@@ -1852,7 +1852,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      projects: []
+    };
+  },
+  beforCreate: function beforCreate() {
+    var _this = this;
+
+    axios.get('/api/project'), then(function (response) {
+      _this.projects = response.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -19417,16 +19435,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("h3", [_vm._v("\r\n        projects\r\n     ")]),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.projects, function(project) {
+        return _c("li", { key: project.id }, [
+          _vm._v("\r\n        " + _vm._s(project.title) + "\r\n    ")
+        ])
+      }),
+      0
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("h3", [_vm._v("\r\n        projects\r\n     ")])])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
